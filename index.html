@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel with Hover Description</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: cornflowerblue;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel__viewport {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .carousel__slide {
+            position: relative;
+            min-width: 100%;
+            scroll-snap-align: start;
+            overflow: hidden;
+        }
+
+        .carousel__snapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .Desc {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 255, 0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0; 
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel__slide:hover .Desc {
+            opacity: 1; 
+        }
+    </style>
+</head>
+        
+   
+
+<h1 id="port">PORTFOLIO</h1>
+
+<p id="skol">ACT College Day</p>
+
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    <li id="carousel__slide1"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src =" C:\Users\ACT-STUDENT\Desktop\Jabonero\OpeningSalvo.jpeg" id="pic1"><br><br>
+        <div class="Desc">The Opening Salvo at the Asian College of Technology is a vibrant and engaging event that marks the 
+          beginning of the academic year. It features inspiring speeches from faculty and student leaders, cultural performances, 
+          and an introduction to the college's values and mission. The event aims to foster a sense 
+          of community and enthusiasm among students, encouraging them to embrace their educational journey with passion and dedication.
+        </div><br><br>
+        <a href="#carousel__slide5"
+           class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2"
+           class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+
+    <li id="carousel__slide2"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src ="C:\Users\ACT-STUDENT\Desktop\Jabonero\IMG_9658.jpeg" id="pic2">
+      <a href="#carousel__slide1"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide3"
+         class="carousel__next">Go to next slide</a>
+        </div>
+    </li>
+
+    <li id="carousel__slide3"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src ="C:\Users\ACT-STUDENT\Desktop\Jabonero\Programming.jpeg" id="pic3"><br><br>
+        <div class="Desc">The ACT College Day Programming Game is an interactive event designed to engage students in hands-on learning and teamwork. Participants tackle various challenges that test their problem-solving skills, creativity, and knowledge across different subjects. Through fun activities and competitions, the game fosters collaboration 
+          among students, enhances critical thinking, and promotes a sense of school spirit and camaraderie, making it a memorable part of the college experience.
+        </div><br><br>
+      <a href="#carousel__slide2"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide4"
+         class="carousel__next">Go to next slide</a>
+        </div>
+    </li>
+
+    <li id="carousel__slide4"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src ="C:\Users\ACT-STUDENT\Desktop\Jabonero\cashLanding.jpeg" id="pic4"><br><br>
+        <div class="Desc">The Cash Landing Seminar is a financial literacy event aimed at equipping students with essential money management skills. It covers topics such as budgeting, saving, investing, and understanding credit. Through interactive workshops and expert presentations, attendees learn practical strategies to make informed financial decisions, 
+          empowering them to manage their finances effectively for a secure future. The seminar fosters a culture of financial awareness and responsibility among participants.
+        </div><br><br>
+      <a href="#carousel__slide3"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide5"
+         class="carousel__next">Go to next slide</a>
+        </div>
+    </li>
+
+    <li id="carousel__slide5"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <img src ="C:\Users\ACT-STUDENT\Desktop\Jabonero\digitalArts.jpeg" id="pic5"><br><br>
+        <div class="Desc"> Digital Arts is a creative discipline that encompasses various forms of artistic expression using digital technology. This includes graphic design, digital painting, animation, 3D modeling, and interactive media. Students explore tools like software and hardware to create visually compelling works, combining traditional art techniques with modern technology. 
+        The field encourages innovation and experimentation, preparing students for careers in industries such as gaming, film, advertising, and web design.</div><br><br>
+      <a href="#carousel__slide4"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide1"
+         class="carousel__next">Go to next slide</a>
+        </div>
+    </li>
+
+  </ol>
+
+
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1"
+           class="carousel__navigation-button">Go to slide 1</a>
+      </li>
+
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2"
+           class="carousel__navigation-button">Go to slide 2</a>
+      </li>
+
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide3"
+           class="carousel__navigation-button">Go to slide 3</a>
+      </li>
+
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4"
+           class="carousel__navigation-button">Go to slide 4</a>
+      </li>
+
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide5"
+           class="carousel__navigation-button">Go to slide 5</a>
+      </li>
+      
+    </ol>
+  </aside>
+</section>
+
+ </body>
+</html>
